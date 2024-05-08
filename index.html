@@ -55,10 +55,9 @@
                 let AnimeLink = new URL(window.location.href);
                 let params = new URLSearchParams(AnimeLink.search);
                 let AnimeId = params.get('AnimeId');
-                alert("1");
 
                 let LineText = storedText.split("\n");
-                alert("2");
+                alert(LineText.count);
                 for (i = 1; i <= LineText.count; i++)
                 {
                     alert("3");
