@@ -58,27 +58,29 @@
 
                 let LineText = storedText.split('\n');
                 var A = "1";
+                var No = 1;
                 try
                 {
                     while (A == "1")
                     {
-                        let SplitedLine = LineText[i].split("_____");
                         alert("1");
-                        if (SplitedLine[0] == AnimeId)
+                        let SplitedLine = LineText[i].split("_____");
+                        alert("2");
+                        if (SplitedLine[No] == AnimeId)
                         {
-                            alert("2");
+                            alert("3");
                             document.getElementById("LinkToTerabox").href = SplitedLine[2];
                             A = "2";
                             return;
-                            alert("3");
                         }
+                        No = No + 1;
                         alert("4");
                         alert(LineText[i]);
                     }
                 }
                 catch
                 {
-                    alert("11");
+                    alert("ww");
                 }
             }
         }
