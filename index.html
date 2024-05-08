@@ -60,28 +60,23 @@
                 var A = "1";
                 var No = 1;
                 try
- {
-     while (A == "1")
-     {
-         alert("1");
-         let SplitedLine = LineText[No - 1].split("_____");
-         alert("2");
-         if (SplitedLine[0] == AnimeId)
-         {
-             alert("3");
-             document.getElementById("LinkToTerabox").href = SplitedLine[2];
-             A = "2";
-             alert(SplitedLine[0]);
-             return;
-         }
-         No = No + 1;
-         alert("4");
-     }
- }
- catch
- {
-     alert("ww");
- }
+                {
+                    while (A == "1")
+                    {
+                        let SplitedLine = LineText[No - 1].split("_____");
+                        if (SplitedLine[0] == AnimeId)
+                        {
+                            document.getElementById("LinkToTerabox").href = SplitedLine[2];
+                            A = "2";
+                            return;
+                        }
+                        No = No + 1;
+                    }
+                }
+                catch
+                {
+                    alert("ww");
+                }
             }
         }
     </script>
@@ -209,7 +204,7 @@
                 <font id="DownloadLink" size="10px">Your Link Is Being Generated.</font><br /><br />
                 <font size="10px"><span id="CountDownTimer"></span></font>
                 <br />
-                <a id="LinkToTerabox" runat="server" href="#" style="visibility:hidden">Download Link (Currently Building)</a><br /><br />
+                <a id="LinkToTerabox" runat="server" href="#" style="visibility:hidden">Download Link</a><br /><br />
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398602224326164"
                         crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
