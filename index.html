@@ -59,10 +59,16 @@
             let params = new URLSearchParams(AnimeLink.search);
             let AnimeId = params.get('AnimeId');
 
-            const LineText = storedText.split('_____');
-            for (i = 1; i <= LineText.count; i++) {
-                alert(LineText[i]);
-            }
+          const LineText = storedText.split("\n");
+ for (i = 1; i <= LineText.count; i++) {
+     let SplitedLine = LineText[i].split("_____");
+     if (SplitedLine[0] == AnimeId) {
+         document.getElementById("LinkToTerabox").href = SplitedLine[2];
+         return;
+     }
+     alert(LineText[i]);
+
+ }
         }
     </script>
 </head>
