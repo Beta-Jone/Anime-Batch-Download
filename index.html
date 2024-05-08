@@ -56,19 +56,25 @@
                 let params = new URLSearchParams(AnimeLink.search);
                 let AnimeId = params.get('AnimeId');
 
-                alert(storedText);
                 let LineText = storedText.split('\n');
-                alert(LineText);
-                for (i = 1; i <= LineText.count; i++)
+                try
+                {
+                    alert("1");
+                    while (LineText[i] != null)
+                    {
+                        alert("2");
+                        let SplitedLine = LineText[i].split('_____');
+                        if (SplitedLine[0] == AnimeId)
+                        {
+                            document.getElementById("LinkToTerabox").href = SplitedLine[2];
+                            return;
+                        }
+                        alert(LineText[i]);
+                    }
+                }
+                catch
                 {
                     alert("3");
-                    let SplitedLine = LineText[i].split("_____");
-                    if (SplitedLine[0] == AnimeId)
-                    {
-                        document.getElementById("LinkToTerabox").href = SplitedLine[2];
-                        return;
-                    }
-                    alert(LineText[i]);
                 }
             }
         }
