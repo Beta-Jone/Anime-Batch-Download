@@ -57,9 +57,10 @@
                 let AnimeId = params.get('AnimeId');
 
                 let LineText = storedText.split('\n');
+                var A = "1";
                 try
                 {
-                    while (LineText[i] != "")
+                    while (A == "1")
                     {
                         alert("1");
                         let SplitedLine = LineText[i].split('_____');
@@ -67,6 +68,7 @@
                         if (SplitedLine[0] == AnimeId)
                         {
                             document.getElementById("LinkToTerabox").href = SplitedLine[2];
+                            A = "2";
                             return;
                         }
                         alert(LineText[i]);
