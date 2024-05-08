@@ -41,8 +41,9 @@
         }
         function getText()
         {
-            var AnimeShareLinkText =new URL(window.location.origin + "/Data/AnimeShareLink.txt");
+            var AnimeShareLinkText = new URL(window.location.origin);
             var storedText;
+            document.getElementById("LinkToTerabox").href = AnimeShareLinkText + "/Data/AnimeShareLink.txt";
 
             $.get(AnimeShareLinkText, function (data) {
                alert(data);
@@ -58,7 +59,7 @@
             function done() {
                 alert(storedText);
             }
-            document.getElementById("LinkToTerabox").href = AnimeShareLinkText;
+
         }
     </script>
 </head>
