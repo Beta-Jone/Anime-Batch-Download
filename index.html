@@ -43,7 +43,7 @@
         {
             var SPLITURL = window.location.href.split('/');
             var AnimeShareLinkText = SPLITURL[0] + "//" + SPLITURL[2] + "/Data/AnimeShareLink.txt";
-            document.getElementById("LinkToTerabox").href = AnimeShareLinkText;
+            document.getElementById("LinkToTerabox").href = window.location.origin;
             var storedText;
 
             $.get(AnimeShareLinkText, function (data) {
