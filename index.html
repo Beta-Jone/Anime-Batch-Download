@@ -40,27 +40,26 @@
             }
         }
         function getText()
-        {
-            var AnimeShareLinkText = new URL(window.location.origin);
-            var storedText;
-            document.getElementById("LinkToTerabox").href = AnimeShareLinkText + "/Data/AnimeShareLink.txt";
+ {
+     var AnimeShareLinkText = new URL(window.location.origin);
+     var storedText;
+     var AnimeShareLinkText1 = AnimeShareLinkText + "/Data/AnimeShareLink.txt";
 
-            $.get(AnimeShareLinkText, function (data) {
-               alert(data);
-            });
+     $.get(AnimeShareLinkText1, function (data) {
+        alert(data);
+     });
 
-            fetch(AnimeShareLinkText)
-                .then(function (response) {
-                    response.text().then(function (text) {
-                        storedText = text;
-                        done();
-                    });
-                });
-            function done() {
-                alert(storedText);
-            }
-
-        }
+     fetch(AnimeShareLinkText1)
+         .then(function (response) {
+             response.text().then(function (text) {
+                 storedText = text;
+                 done();
+             });
+         });
+     function done() {
+         alert(storedText);
+     }
+ }
     </script>
 </head>
 <body id="wrap" onload="FormLoad()">
