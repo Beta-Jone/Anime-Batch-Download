@@ -9,10 +9,9 @@
             crossorigin="anonymous"></script>
     <script>
         var count;
-        let storedText;
         function FormLoad()
         {
-            count = "3";
+            count = "10";
             var counter = setInterval(timer, 1000);
         }
         function timer() {
@@ -39,40 +38,42 @@
         }
         function getText()
         {
+            let storedText;
             var AnimeShareLinkText = new URL(window.location.origin);
             var AnimeShareLinkText1 = AnimeShareLinkText + "/Data/AnimeShareLink.txt";
 
             fetch(AnimeShareLinkText1)
-                .then(function (response) {
-                    response.text().then(function (text) {
+                .then(function (response)
+                {
+                    response.text().then(function (text)
+                    {
                         storedText = text;
                         done();
                     });
                 });
-            function done() {
-                getLink();
+            function done()
+            {
+                let AnimeLink = new URL(window.location.href);
+                let params = new URLSearchParams(AnimeLink.search);
+                let AnimeId = params.get('AnimeId');
+
+                let LineText = storedText.split("\n");
+                for (i = 1; i <= LineText.count; i++)
+                {
+                    let SplitedLine = LineText[i].split("_____");
+                    if (SplitedLine[0] == AnimeId)
+                    {
+                        document.getElementById("LinkToTerabox").href = SplitedLine[2];
+                        return;
+                    }
+                    alert(LineText[i]);
+
+                }
             }
-        }
-        function getLink()
-        {
-            let AnimeLink = new URL(window.location.href);
-            let params = new URLSearchParams(AnimeLink.search);
-            let AnimeId = params.get('AnimeId');
-
-          let LineText = storedText.split('\n');
- for (i = 1; i <= LineText.count; i++) {
-     let SplitedLine = LineText[i].split('_____');
-     if (SplitedLine[0] == AnimeId) {
-         document.getElementById("LinkToTerabox").href = SplitedLine[2];
-         return;
-     }
-     alert(LineText[i]);
-
- }
         }
     </script>
 </head>
-<body id="wrap" onload="FormLoad()">
+<body id="wrap" on="FormLoad()">
     <div id="header">
         Welcome To Anime Batch Download
     </div>
