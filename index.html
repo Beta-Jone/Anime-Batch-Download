@@ -60,28 +60,28 @@
                 var A = "1";
                 var No = 1;
                 try
-                {
-                    while (A == "1")
-                    {
-                        alert("1");
-                        let SplitedLine = LineText[No - 1].split("_____");
-                        alert("2");
-                        if (SplitedLine[0] == AnimeId)
-                        {
-                            alert("3");
-                            document.getElementById("LinkToTerabox").href = SplitedLine[2];
-                            A = "2";
-                            return;
-                        }
-                        No = No + 1;
-                        alert("4");
-                        alert(LineText[No -1]);
-                    }
-                }
-                catch
-                {
-                    alert("ww");
-                }
+ {
+     while (A == "1")
+     {
+         alert("1");
+         let SplitedLine = LineText[No - 1].split("_____");
+         alert("2");
+         if (SplitedLine[0] == AnimeId)
+         {
+             alert("3");
+             document.getElementById("LinkToTerabox").href = SplitedLine[2];
+             A = "2";
+             alert(SplitedLine[0]);
+             return;
+         }
+         No = No + 1;
+         alert("4");
+     }
+ }
+ catch
+ {
+     alert("ww");
+ }
             }
         }
     </script>
