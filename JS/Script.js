@@ -3,7 +3,7 @@ var count;
 function StartTimer() {
     document.getElementById("GenerateDownloadLink").style.visibility = "hidden";
     document.getElementById("GeneratingDownloadLinkText").style.visibility = "visible";
-    count = "2";
+    count = "16";
     var counter = setInterval(timer, 1000);
 }
 function timer() {
