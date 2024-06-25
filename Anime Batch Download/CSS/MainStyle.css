@@ -1,0 +1,26 @@
+﻿body
+{
+    background-color:white;
+}
+
+#wrap
+{
+    width:90%;
+    margin:0 auto;
+}
+
+#header
+{
+    width: auto;
+    text-align: center;
+    font-size: 80px;
+}
+
+
+#content 
+{
+    width: auto;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 50px;
+}
